@@ -27,7 +27,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: New user
-        run: sudo useradd -G admin -p "$(openssl passwd -6 password)" mallardluna
+        run: sudo useradd -G admin -p "$(openssl passwd -6 password)" tempuser
       - name: Ngrok (install key)
         run: "curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null"
       - name: Ngrok (install repo)
